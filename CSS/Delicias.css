@@ -136,3 +136,48 @@ footer {
 footer p {
     padding: 5px;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .arriba img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .abajo {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .abajo a {
+        margin: 5px 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Una columna en lugar de dos */
+        gap: 10px;
+    }
+
+    .delicia {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .delicia img {
+        margin: 0 0 10px 0;
+        max-width: 100%; /* Ajustar al 100% del contenedor */
+    }
+
+    .delicia .texto {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
