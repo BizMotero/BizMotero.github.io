@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    height: 100%;
+}
+
+header {
+    background-color: rgb(108, 108, 235);
+    display: grid;
+    grid-row: 1 / 2;
+}
+
+.arriba {
+    display: flex;
+    justify-content: space-around;
+}
+
+.arriba img {
+    height: 100px;
+    width: 100px;
+}
+
+.abajo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(196, 240, 248);
+}
+
+
+.carta {
+    margin: 5px 0;
+    background-color: rgb(247, 226, 200);
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.carta p {
+    margin: 5px 0; /* Add vertical margin to space out the paragraphs */
+}
+
+
+footer {
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    grid-row: 3 / 4;
+}
+
+footer p {
+    padding: 5px;
+}

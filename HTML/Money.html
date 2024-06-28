@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Resolver el Laberinto</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(223, 253, 194);
+            display: flex;
+            flex-direction: column;
+        }
+        #texto{
+            text-align: center;
+            line-height: 12px;
+            margin-bottom: -30px;
+        }
+        #container {
+            display: flex;
+            align-items: center;
+            margin-left: 90px;
+        }
+        canvas {
+            border: 2px solid #000;
+            height: 90%;
+        }
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+        button {
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 40px;
+            width: 75px;
+            height: 75px;
+        }
+
+        #restartButton{
+            background-color: rgb(248, 63, 63);
+        }
+
+        #surpriseButton{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="texto">
+        <h1>Michidurum</h1>
+        <p>Bicho puede oler un kebab en el laberinto pero no sabe donde está</p>
+        <p>Ayudalo a llegar hasta el</p>
+    </div>
+    <div id="container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="buttons">
+            <button id="restartButton">Reiniciar</button>
+            <button id="surpriseButton">Volver</button>
+        </div>
+    </div>
+    <script src="../JS/money.js"></script>
+</body>
+</html>

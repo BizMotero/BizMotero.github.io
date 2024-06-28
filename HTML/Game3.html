@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria para 2 Jugadores</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        main {
+            text-align: center;
+            margin-bottom: 5px;
+            line-height: 15px;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-left: 180px;
+        }
+        #gameBoard {
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(4, 100px);
+            gap: 10px;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0;
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .card.revealed img {
+            display: block;
+        }
+        #status {
+            margin-top: 20px;
+            text-align: center;
+            margin-left: 8px;
+        }
+        #controls {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 5px;
+        }
+        #resetButton {
+            background-color: rgb(170, 65, 65);
+            border-radius: 15px;
+            width: 70px;
+            height: 70px;
+        }
+        #otherPageButton {
+            background-color: aquamarine;
+            border-radius: 15px;
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Buscamitad</h1>
+        <p>El ajolote mágico dividio a Paquito y todos los animalitos en 2.</p>
+        <p>Ayudalos a encontrar su otra mitad</p>
+    </main>
+    <div id="container">
+        <div id="gameBoard"></div>
+        <div id="status">
+            <p>Jugador 1: <span id="player1Score">0</span></p>
+            <p>Jugador 2: <span id="player2Score">0</span></p>
+            <p>Turno de: <span id="currentPlayer">Jugador 1</span></p>
+        </div>
+        <div id="controls">
+            <button id="resetButton">Reiniciar</button>
+            <button id="otherPageButton">Volver</button>
+        </div>
+    </div>
+    <script src="../JS/breakout.js"></script>
+</body>
+</html>

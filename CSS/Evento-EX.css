@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dbffeb;
+}
+
+main {
+    text-align: center;
+}
+
+main h1, main p{
+    margin: 8px;
+}
+
+.game-area {
+    display: flex;
+    align-items: center;
+}
+
+#game-container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border: 2px solid #333;
+    margin-right: 20px;
+}
+
+.square {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('../Imagenes/gatito.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info p {
+    margin: 5px 0;
+}
+
+#restart-btn {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#back-btn {
+    margin-top: 15px;
+    background-color: rgb(59, 230, 187); /* Puedes cambiar este color si prefieres otro */
+    
+}

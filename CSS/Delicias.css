@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+}
+
+header {
+    background-color: rgb(108, 108, 235);
+    display: grid;
+    grid-row: 1 / 2;
+}
+
+.arriba {
+    display: flex;
+    justify-content: space-around;
+}
+
+.arriba img {
+    height: 100px;
+    width: 100px;
+}
+
+.abajo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 5px;
+}
+
+main {
+    grid-row: 2 / 3;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+.delicia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff; /* Fondo blanco para las secciones */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+.delicia img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Tamaño máximo para las imágenes */
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.delicia .texto {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.color1 {
+    background-color: lightcoral;
+}
+
+.color2 {
+    background-color: lightseagreen;
+}
+
+.color3 {
+    background-color: lightblue;
+}
+
+.color4 {
+    background-color: lightgoldenrodyellow;
+}
+
+.color5 {
+    background-color: burlywood;
+}
+
+.color6 {
+    background-color: rgb(230, 255, 171);
+}
+
+.color7 {
+    background-color: rgb(174, 255, 150);
+}
+
+.color8 {
+    background-color: rgb(232, 164, 253);
+}
+
+.color9 {
+    background-color: rgb(126, 252, 231);
+}
+
+.color10 {
+    background-color: rgb(255, 187, 215);
+}
+
+footer {
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    grid-row: 3 / 4;
+}
+
+footer p {
+    padding: 5px;
+}
