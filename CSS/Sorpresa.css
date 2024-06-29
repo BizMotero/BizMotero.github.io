@@ -93,18 +93,3 @@ main {
     margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-    .arriba img {
-        height: 60px;
-        width: 60px;
-    }
-
-    .abajo {
-        flex-direction: row;
-        padding-bottom: 10px;
-    }
-
-    .abajo a {
-        margin: 5px 0;
-    }
-}
