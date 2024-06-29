@@ -51,13 +51,12 @@ footer p {
     padding: 5px;
 }
 
-
-
 main {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     background-color: rgb(230, 214, 248);
+    flex-wrap: wrap;
 }
 
 .cuadrado {
@@ -68,6 +67,7 @@ main {
     text-align: center;
     width: 200px;
     transition: transform 0.3s;
+    margin: 10px;
 }
 
 .cuadrado:hover {
@@ -91,5 +91,45 @@ main {
     height: 100px;
     width: 100px;
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .arriba img {
+        height: 75px;
+        width: 75px;
+    }
+
+    .cuadrado {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .imagen-circular, .imagen-circular3 {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arriba img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .cuadrado {
+        width: 90%;
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    .imagen-circular, .imagen-circular3 {
+        height: 50px;
+        width: 50px;
+    }
 }
 
