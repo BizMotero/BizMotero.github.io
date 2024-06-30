@@ -11,14 +11,15 @@ html, body {
 
 body {
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: auto 1fr auto;
     height: 100%;
 }
 
 header {
     background-color: rgb(108, 108, 235);
-    display: grid;
-    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente en todos los dispositivos */
+    align-items: center; /* Centra verticalmente en todos los dispositivos */
 }
 
 .arriba {
@@ -79,4 +80,10 @@ footer {
 
 footer p {
     padding: 5px;
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center; /* Centra el texto dentro del header en dispositivos móviles */
+    }
 }
