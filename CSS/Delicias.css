@@ -139,6 +139,20 @@ footer p {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+    .arriba img {
+        height: 95px;
+        width: 95px;
+    }
+
+    .abajo {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .abajo a {
+        margin: 5px 0;
+    }
+    
     .grid-container {
         grid-template-columns: 1fr; /* Una columna en lugar de dos */
         gap: 10px;
