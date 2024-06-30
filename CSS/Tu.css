@@ -17,9 +17,8 @@ body {
 
 header {
     background-color: rgb(108, 108, 235);
-    display: flex;
-    justify-content: center; /* Centra horizontalmente en todos los dispositivos */
-    align-items: center; /* Centra verticalmente en todos los dispositivos */
+    display: grid;
+    grid-row: 1 / 2;
 }
 
 .arriba {
