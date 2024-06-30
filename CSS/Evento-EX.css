@@ -1,6 +1,15 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +20,7 @@ main {
     text-align: center;
 }
 
-main h1, main p{
+main h1, main p {
     margin: 8px;
 }
 
@@ -63,3 +72,28 @@ main h1, main p{
     background-color: rgb(59, 230, 187); /* Puedes cambiar este color si prefieres otro */
     
 }
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .game-area {
+        flex-direction: column;
+    }
+
+    #game-container {
+        width: 300px;
+        height: 300px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .square {
+        width: 40px;
+        height: 40px;
+    }
+
+    #restart-btn, #back-btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
