@@ -1,12 +1,12 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-const cellSize = 30;  // Ajusta el tamaño de las celdas
-const cols = 15;  // Número de columnas
-const rows = 15;  // Número de filas
+const cellSize = 30;
+const cols = 15;
+const rows = 15;
 
-const canvasWidth = cellSize * cols;  // Nuevo tamaño del canvas basado en el número de celdas y el tamaño de cada celda
-const canvasHeight = cellSize * rows;  // Nuevo tamaño del canvas basado en el número de celdas y el tamaño de cada celda
+const canvasWidth = cellSize * cols;
+const canvasHeight = cellSize * rows;
 
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
@@ -14,19 +14,18 @@ canvas.height = canvasHeight;
 let grid = [];
 let current;
 let stack = [];
-let playerImg = new Image();  // Imagen del jugador
-playerImg.src = "../Imagenes/bicho.png";  // Ruta de la imagen del jugador
-let goalImg = new Image();  // Imagen de la salida
-goalImg.src = "../Imagenes/durum.jpg";  // Ruta de la imagen de la salida
-let player = { x: 0, y: 0, size: cellSize, img: playerImg };  // Ajusta el tamaño y la imagen del jugador
-let goal = { x: cols - 1, y: rows - 1, size: cellSize, img: goalImg };  // Ajusta el tamaño y la imagen de la salida
+let playerImg = new Image();
+playerImg.src = "../Imagenes/bicho.png";
+let goalImg = new Image();
+goalImg.src = "../Imagenes/durum.jpg";
+let player = { x: 0, y: 0, size: cellSize, img: playerImg };
+let goal = { x: cols - 1, y: rows - 1, size: cellSize, img: goalImg };
 
-// Directions
 const directions = [
-    { x: 0, y: -1 },  // up
-    { x: 1, y: 0 },   // right
-    { x: 0, y: 1 },   // down
-    { x: -1, y: 0 }   // left
+    { x: 0, y: -1 }, // up
+    { x: 1, y: 0 },  // right
+    { x: 0, y: 1 },  // down
+    { x: -1, y: 0 }  // left
 ];
 
 function index(i, j) {
@@ -40,7 +39,7 @@ function Cell(i, j) {
     this.walls = [true, true, true, true]; // top, right, bottom, left
     this.visited = false;
 
-    this.show = function() {
+    this.show = function () {
         let x = this.i * cellSize;
         let y = this.j * cellSize;
         ctx.strokeStyle = "black";
@@ -72,7 +71,7 @@ function Cell(i, j) {
         }
     };
 
-    this.checkNeighbors = function() {
+    this.checkNeighbors = function () {
         let neighbors = [];
 
         const top = grid[index(i, j - 1)];
@@ -192,6 +191,42 @@ function movePlayer(dx, dy) {
     draw();
 }
 
+function handleTouchStart(e) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+}
+
+function handleTouchMove(e) {
+    e.preventDefault();
+    touchEndX = e.touches[0].clientX;
+    touchEndY = e.touches[0].clientY;
+
+    const dx = touchEndX - touchStartX;
+    const dy = touchEndY - touchStartY;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        // Movimiento horizontal
+        if (dx > 0) {
+            movePlayer(1, 0); // Derecha
+        } else {
+            movePlayer(-1, 0); // Izquierda
+        }
+    } else {
+        // Movimiento vertical
+        if (dy > 0) {
+            movePlayer(0, 1); // Abajo
+        } else {
+            movePlayer(0, -1); // Arriba
+        }
+    }
+
+    touchStartX = touchEndX;
+    touchStartY = touchEndY;
+}
+
+canvas.addEventListener("touchstart", handleTouchStart, false);
+canvas.addEventListener("touchmove", handleTouchMove, false);
+
 function keyDown(e) {
     switch (e.key) {
         case "ArrowUp":
@@ -232,3 +267,4 @@ document.getElementById("surpriseButton").addEventListener("click", () => {
 
 // Initial game setup
 restartGame();
+
