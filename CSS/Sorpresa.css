@@ -94,6 +94,20 @@ main {
 }
 
 @media (max-width: 768px) {
+        .arriba img {
+        height: 95px;
+        width: 95px;
+    }
+
+    .abajo {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .abajo a {
+        margin: 5px 0;
+    }
+    
     main {
         flex-direction: column;
         align-items: center;
