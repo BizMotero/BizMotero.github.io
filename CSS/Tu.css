@@ -83,6 +83,20 @@ footer p {
 }
 
 @media (max-width: 768px) {
+        .arriba img {
+        height: 95px;
+        width: 95px;
+    }
+
+    .abajo {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .abajo a {
+        margin: 5px 0;
+    }
+    
     header {
         text-align: center; /* Centra el texto dentro del header en dispositivos móviles */
     }
