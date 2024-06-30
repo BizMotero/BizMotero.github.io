@@ -94,31 +94,9 @@ main {
 }
 
 @media (max-width: 768px) {
-    .arriba img {
-        height: 75px;
-        width: 75px;
-    }
-
-    .cuadrado {
-        width: 150px;
-        padding: 15px;
-    }
-
-    .imagen-circular, .imagen-circular3 {
-        height: 75px;
-        width: 75px;
-    }
-}
-
-@media (max-width: 768px) {
     main {
         flex-direction: column;
         align-items: center;
-    }
-
-    .arriba img {
-        height: 50px;
-        width: 50px;
     }
 
     .cuadrado {
