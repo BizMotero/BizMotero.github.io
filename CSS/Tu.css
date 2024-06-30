@@ -11,7 +11,7 @@ html, body {
 
 body {
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: auto 1fr auto;
     height: 100%;
 }
 
@@ -39,33 +39,89 @@ header {
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgb(196, 240, 248);
-    text-align: center; /* Centra horizontalmente todo el contenido dentro de main */
-}
-
-
-.carta {
-    margin: 5px 0;
-    background-color: rgb(247, 226, 200);
-    width: 350px;
-    height: 350px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
-                0 6px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
+    grid-row: 2 / 3;
     padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.carta p {
-    margin: 5px 0; /* Add vertical margin to space out the paragraphs */
+main h1 {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+.delicia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff; /* Fondo blanco para las secciones */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+.delicia img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Tamaño máximo para las imágenes */
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.delicia .texto {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.color1 {
+    background-color: lightcoral;
+}
+
+.color2 {
+    background-color: lightseagreen;
+}
+
+.color3 {
+    background-color: lightblue;
+}
+
+.color4 {
+    background-color: lightgoldenrodyellow;
+}
+
+.color5 {
+    background-color: burlywood;
+}
+
+.color6 {
+    background-color: rgb(230, 255, 171);
+}
+
+.color7 {
+    background-color: rgb(174, 255, 150);
+}
+
+.color8 {
+    background-color: rgb(232, 164, 253);
+}
+
+.color9 {
+    background-color: rgb(126, 252, 231);
+}
+
+.color10 {
+    background-color: rgb(255, 187, 215);
 }
 
 footer {
