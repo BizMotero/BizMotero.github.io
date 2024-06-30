@@ -87,6 +87,7 @@ footer p {
     }
 
     .abajo {
+        /**fila**/
         flex-direction: row;
         padding-bottom: 10px;
     }
