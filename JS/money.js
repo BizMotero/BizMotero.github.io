@@ -267,4 +267,3 @@ document.getElementById("surpriseButton").addEventListener("click", () => {
 
 // Initial game setup
 restartGame();
-
