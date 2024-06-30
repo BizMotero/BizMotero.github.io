@@ -87,7 +87,7 @@ footer p {
     }
 
     .abajo {
-        flex-direction: column;
+        flex-direction: row;
         padding-bottom: 10px;
     }
 
