@@ -64,9 +64,8 @@ main {
 }
 
 .carta p {
-    margin: 5px 0; /* Add vertical margin to space out the paragraphs */
+    margin: 10px 0; /* Ajuste el margen según sea necesario */
 }
-
 
 footer {
     background-color: burlywood;
