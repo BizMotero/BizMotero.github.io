@@ -44,6 +44,7 @@ main {
     align-items: center;
     flex-direction: column;
     background-color: rgb(196, 240, 248);
+    text-align: center; /* Centra horizontalmente todo el contenido dentro de main */
 }
 
 
@@ -66,7 +67,6 @@ main {
 .carta p {
     margin: 5px 0; /* Add vertical margin to space out the paragraphs */
 }
-
 
 footer {
     background-color: burlywood;
