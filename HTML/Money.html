@@ -5,77 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de Resolver el Laberinto</title>
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(223, 253, 194);
-            display: flex;
-            flex-direction: column;
-        }
-        #texto{
-            text-align: center;
-            line-height: 12px;
-            margin-bottom: -30px;
-        }
-        #container {
-            display: flex;
-            align-items: center;
-            margin-left: 90px;
-        }
-        canvas {
-            border: 2px solid #000;
-            height: 90%;
-        }
-        #buttons {
-            display: flex;
-            flex-direction: column;
-            margin-left: 20px;
-        }
-        button {
-            margin: 10px 0;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 40px;
-            width: 75px;
-            height: 75px;
-        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        #restartButton{
-            background-color: rgb(248, 63, 63);
-        }
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 253, 194);
+    flex-direction: column;
+}
 
-        #surpriseButton{
-            background-color: aquamarine;
-        }
+#texto {
+    text-align: center;
+    line-height: 1.5; /* Ajusta el espaciado entre líneas */
+    margin-bottom: 20px; /* Espacio inferior para separar del contenedor siguiente */
+}
 
-        @media (max-width: 768px) {
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Espacio superior para separar del texto */
+}
+
+canvas {
+    max-width: 90%; /* Ajusta el ancho máximo del canvas */
+    max-height: 50vh; /* Ajusta la altura máxima del canvas para no ocupar demasiado espacio */
+    border: 2px solid #000;
+}
+
+#buttons {
+    margin-top: 20px; /* Espacio superior para separar de otros elementos */
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 120px;
+    height: 40px;
+}
+
+#restartButton {
+    background-color: rgb(248, 63, 63);
+}
+
+#surpriseButton {
+    background-color: aquamarine;
+}
+
+@media (min-width: 769px) {
+    /* Estilos adicionales para pantallas más grandes si es necesario */
     #container {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
+        flex-direction: row;
+        margin-left: 90px;
     }
 
     canvas {
-        width: 90%;
-        max-width: 300px; /* Ajusta el ancho máximo del canvas */
-        height: auto; /* Autoajusta la altura según el ancho */
-        border: 2px solid #000;
+        width: auto;
+        height: 90%;
     }
 
     #buttons {
-        margin-left: 0;
-        margin-top: 20px;
+        margin-left: 20px;
+        margin-top: 0;
     }
 
     button {
-        width: 120px;
-        height: 40px;
-        font-size: 14px;
+        width: 75px;
+        height: 75px;
+        font-size: 16px;
     }
 }
+
 
     </style>
 </head>
