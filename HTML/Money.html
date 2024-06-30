@@ -50,6 +50,33 @@
         #surpriseButton{
             background-color: aquamarine;
         }
+
+        @media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    canvas {
+        width: 90%;
+        max-width: 300px; /* Ajusta el ancho máximo del canvas */
+        height: auto; /* Autoajusta la altura según el ancho */
+        border: 2px solid #000;
+    }
+
+    #buttons {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    button {
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 <body>
